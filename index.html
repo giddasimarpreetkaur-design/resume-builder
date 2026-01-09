@@ -1,27 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Free Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <header>
   <h1>Free Resume Builder</h1>
   <p>Create a professional resume in minutes</p>
 </header>
-<body>
-<h1>Free Resume Builder</h1>
-<p>Create your resume & download PDF in minutes</p>
 
 <div class="container">
+
   <!-- FORM -->
   <div class="form">
     <input type="text" id="name" placeholder="Full Name">
     <input type="text" id="email" placeholder="Email">
     <input type="text" id="phone" placeholder="Phone Number">
-    
+
     <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
     <textarea id="education" placeholder="Education"></textarea>
     <textarea id="experience" placeholder="Experience"></textarea>
 
-   <select id="template" onchange="changeTemplate()">
-  <option value="classic">Classic Template</option>
-  <option value="modern">Modern Template</option>
-</select>
- <button onclick="updateResume()">Preview Resume</button>
+    <select id="template" onchange="changeTemplate()">
+      <option value="classic">Classic Template</option>
+      <option value="modern">Modern Template</option>
+    </select>
+
+    <button onclick="updateResume()">Preview Resume</button>
     <button onclick="downloadPDF()">Download PDF</button>
   </div>
 
@@ -40,11 +49,15 @@
     <h3>Experience</h3>
     <p id="r-experience"></p>
 
-    <small>Created using Free Resume Builder</small>
+    <small id="watermark">
+      Created with Free Resume Builder – Upgrade to remove watermark
+    </small>
   </div>
+
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>
