@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Free Resume Builder</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<header>
+  <h1>Free Resume Builder</h1>
+  <p>Create a professional resume in minutes</p>
+</header>
 <body>
-
 <h1>Free Resume Builder</h1>
 <p>Create your resume & download PDF in minutes</p>
 
@@ -21,7 +17,11 @@
     <textarea id="education" placeholder="Education"></textarea>
     <textarea id="experience" placeholder="Experience"></textarea>
 
-    <button onclick="updateResume()">Preview Resume</button>
+   <select id="template" onchange="changeTemplate()">
+  <option value="classic">Classic Template</option>
+  <option value="modern">Modern Template</option>
+</select>
+ <button onclick="updateResume()">Preview Resume</button>
     <button onclick="downloadPDF()">Download PDF</button>
   </div>
 
