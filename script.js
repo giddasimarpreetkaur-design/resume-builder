@@ -21,5 +21,17 @@ function updateResume() {
 function downloadPDF() {
   const resume = document.getElementById("resume");
   html2pdf().from(resume).save("resume.pdf");
+}function changeTemplate() {
+  const resume = document.getElementById("resume");
+  const template = document.getElementById("template").value;
+
+  if (template === "modern") {
+    resume.style.borderLeft = "6px solid #2563eb";
+    resume.style.paddingLeft = "15px";
+  } else {
+    resume.style.borderLeft = "none";
+    resume.style.paddingLeft = "0";
+  }
 }
+
 
